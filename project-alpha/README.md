@@ -1,5 +1,4 @@
-Starter code for quiz-app beginner react project
-
+# Install
 - clone repo
 - npm install
 - npm start
