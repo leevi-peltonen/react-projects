@@ -1,7 +1,7 @@
-## react-projects
+# React-projects
 
-# Project-alhpa
+## Project-Alpha
 Quiz app
 
-# Project-Beta
+## Project-Beta
   Web app for song suggestions (lang: fi)
