@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import data from './Data/db.json';
+import data from "./Data/db.json";
 //import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //CSS Import
@@ -18,14 +18,11 @@ import CreateArea from "./CreateArea";
 //import Login from "./Login/Login";
 ///////////////////////
 
-
 function App() {
   let [notes, setNotes] = useState([]);
 
-
   //const [token, setToken] = useState();
   function addNote(newNote) {
-
     setNotes((prevNotes) => {
       return [...prevNotes, newNote];
     });
@@ -38,9 +35,9 @@ function App() {
       });
     });
   }
-   //if (!token) {
-    // return <Login setToken={setToken} />;
-   //}
+  //if (!token) {
+  // return <Login setToken={setToken} />;
+  //}
   return (
     <>
       <Header />
@@ -54,15 +51,27 @@ function App() {
                 key={index}
                 id={index}
                 title={noteItem.title}
+                content={noteItem.content}
                 score={noteItem.score}
                 onDelete={deleteNote}
               />
             );
           })}
-
+          {data.map((dataItem, index) => {
+            return (
+              <Note
+                key={index}
+                id={index}
+                title={dataItem.title}
+                content={dataItem.content}
+                score={dataItem.score}
+                onDelete={deleteNote}
+              />
+            );
+          })}
         </div>
       </>
-      
+
       <SmallHeader text="Omia biisejä" />
       <Carousel>
         <CarouselItem>

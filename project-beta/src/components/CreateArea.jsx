@@ -37,7 +37,7 @@ function CreateArea(props) {
       score: 0
     });
     
-    event.preventDefault();
+    //event.preventDefault();
     
     
   }
@@ -45,7 +45,7 @@ function CreateArea(props) {
 
   return (
     <div>
-      <form>
+      <form action="/post" method="post" >
         <input
           name="title"
           onChange={handleChange}
@@ -59,7 +59,7 @@ function CreateArea(props) {
           placeholder="Kappale"
           rows="1"
         />
-        <button style={{fontSize: "2em", cursor: disabled ? 'auto' :'pointer'}} onClick={submitNote} disabled={disabled}>+</button>
+        <button type="submit" style={{fontSize: "2em", cursor: disabled ? 'auto' :'pointer'}} onClick={submitNote} disabled={disabled}>+</button>
       </form>
     </div>
   );

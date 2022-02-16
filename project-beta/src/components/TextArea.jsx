@@ -1,5 +1,5 @@
 import React from "react";
-import about from "../utils/text";
+import about from "../TextContent/text";
 
 const TextArea = (props) => {
   return (
